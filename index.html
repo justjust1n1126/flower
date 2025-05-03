@@ -2,41 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sunflower Field</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowers</title>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    canvas { display: block; }
+  </style>
 </head>
 <body>
-  <div class="scene">
-    <div class="sky">
-      <div class="sun"></div>
-    </div>
-    
-    <div class="trees">
-      <div class="tree"></div>
-      <div class="tree"></div>
-    </div>
-    
-    <div class="field">
-      <div class="grass"></div>
-      <div class="sunflowers">
-        <div class="sunflower" style="left: 10%;"></div>
-        <div class="sunflower" style="left: 20%;"></div>
-        <div class="sunflower" style="left: 30%;"></div>
-        <div class="sunflower" style="left: 40%;"></div>
-        <div class="sunflower" style="left: 50%;"></div>
-        <div class="sunflower" style="left: 60%;"></div>
-        <div class="sunflower" style="left: 70%;"></div>
-        <div class="sunflower" style="left: 80%;"></div>
-        <div class="sunflower" style="left: 90%;"></div>
-        <div class="sunflower" style="left: 100%;"></div>
-      </div>
-    </div>
-    
-    <div class="butterflies">
-      
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <canvas id="sunflowerField"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/InstancedMesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/geometries/PlaneGeometry.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/textures/TextureLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/materials/ShaderMaterial.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/lights/DirectionalLight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/lights/AmbientLight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Group.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/InstancedMesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Line.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/LineSegments.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Points.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/PointCloud.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/PointLight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightShadow.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTarget.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
+  <script src
+::contentReference[oaicite:0]{index=0}
+ 
