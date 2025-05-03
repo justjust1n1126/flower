@@ -1,0 +1,102 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: #87ceeb;
+  font-family: sans-serif;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, #87ceeb, #b0e0e6);
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 10px #ffeb3b;
+}
+
+.trees {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tree {
+  width: 30px;
+  height: 100px;
+  background: #8b4513;
+  position: relative;
+  animation: sway 4s ease-in-out infinite alternate;
+}
+
+.tree::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  width: 70px;
+  height: 70px;
+  background: green;
+  border-radius: 50%;
+}
+
+.field {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: #228b22;
+  overflow: hidden;
+}
+
+.grass {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: #006400;
+  animation: sway 3s infinite ease-in-out;
+}
+
+.sunflowers .sunflower {
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  animation: sway 2s ease-in-out infinite alternate;
+}
+
+.butterfly {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: orange;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: flutter 6s linear infinite;
+}
+
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(5deg); }
+}
