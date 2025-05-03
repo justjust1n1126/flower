@@ -3,66 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowers</title>
+  <title>Sunflower Field</title>
   <style>
     body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
     canvas { display: block; }
   </style>
 </head>
 <body>
-  <canvas id="sunflowerField"></canvas>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/InstancedMesh.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/geometries/PlaneGeometry.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/textures/TextureLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/materials/ShaderMaterial.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/lights/DirectionalLight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/lights/AmbientLight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Group.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/InstancedMesh.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Line.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/LineSegments.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/Points.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/PointCloud.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/PointLight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightShadow.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTarget.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/objects/SpotLightTargetHelper.js"></script>
-  <script src
-::contentReference[oaicite:0]{index=0}
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
+  <script>
+    // Scene setup
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x87CEEB); // Sky blue
+
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 5, 20);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0x404040, 1);
+    const sunlight = new THREE.DirectionalLight(0xffffff, 1);
+    sunlight.position.set(10, 20, 10);
+    scene.add(ambientLight, sunlight);
+
+    // Ground
+    const ground = new THREE.Mesh(
+      new THREE.PlaneGeometry(100, 100),
+      new THREE.MeshLambertMaterial({ color: 0x228B22 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    scene.add(ground);
+
+    // Sunflower model (simplified)
+    function createSunflower(x, z) {
+      const group = new THREE.Group();
+
+      const stem = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.05, 0.05, 1),
+        new THREE.MeshLambertMaterial({ color: 0x228B22 })
+      );
+      stem.position.y = 0.5;
+
+      const flower = new THREE.Mesh(
+        new THREE.SphereGeometry(0.3, 16, 16),
+        new THREE.MeshLambertMaterial({ color: 0xffcc00 })
+      );
+      flower.position.y = 1.1;
+
+      group.add(stem, flower);
+      group.position.set(x, 0, z);
+      scene.add(group);
+
+      return group;
+    }
+
+    // Generate many sunflowers
+    const sunflowers = [];
+    for (let i = -5; i <= 5; i++) {
+      for (let j = -5; j <= 5; j++) {
+        const f = createSunflower(i + Math.random() * 0.5, j + Math.random() * 0.5);
+        sunflowers.push(f);
+      }
+    }
+
+    // Butterflies
+    const butterflies = [];
+    const butterflyGeo = new THREE.SphereGeometry(0.1, 8, 8);
+    const butterflyMat = new THREE.MeshBasicMaterial({ color: 0xff69b4 });
+
+    for (let i = 0; i < 10; i++) {
+      const b = new THREE.Mesh(butterflyGeo, butterflyMat);
+      b.position.set(Math.random() * 20 - 10, 1 + Math.random() * 2, Math.random() * 20 - 10);
+      scene.add(b);
+      butterflies.push(b);
+    }
+
+    // Animation loop
+    function animate(time) {
+      requestAnimationFrame(animate);
+
+      // Wind-like sway
+      sunflowers.forEach((f, i) => {
+        const sway = Math.sin(time / 500 + i) * 0.05;
+        f.rotation.z = sway;
+      });
+
+      // Random butterfly motion
+      butterflies.forEach(b => {
+        b.position.x += (Math.random() - 0.5) * 0.02;
+        b.position.y += (Math.random() - 0.5) * 0.02;
+        b.position.z += (Math.random() - 0.5) * 0.02;
+      });
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
